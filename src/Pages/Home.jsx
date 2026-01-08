@@ -5,6 +5,7 @@ import Closet1 from "/closet1.jpeg";
 import Closet2 from "/closet2.jpeg";
 import FemaleStyle from "/FemaleStyle1.jpg";
 import MaleStyle from "/MaleStyle.jpg";
+import Plus from "/plus.svg";
 
 function Home() {
   // const boxRef = useRef(null);
@@ -48,11 +49,15 @@ function Home() {
               alt=""
             />
           </div>
-          <div className="absolute top-10 left-90 bg-[#ffffff]/30 hover:scale-[1.3] transition-transform ease duration-200 left-0 h-5 w-5 rounded-full flex justify-center items-center">
+          <div className="absolute top-[10%] left-[90%] bg-[#ffffff]/30 hover:scale-[1.1] transition-transform ease duration-200 left-0 h-5 w-5 rounded-full flex justify-center items-center">
             <div className="bg-[#ffffff] rounded-full h-3 w-3"></div>
           </div>
-          <div className="absolute top-10 left-90 bg-[#ffffff]/30 hover:scale-[1.3] transition-transform ease duration-200 left-0 h-10 w-40 rounded-full flex justify-center items-center">
+          <div className="absolute top-[15%] left-[90%] z-100 bg-[#ffffff] hover:scale-[1.1] transition-transform ease duration-200 left-0 h-9 w-40 rounded-xl gap-2 flex justify-center items-center">
             <p>Tonal Contrast</p>
+            <div className="bg-gray-400/20 rounded-full h-5 w-5 flex justify-center items-center">
+              {" "}
+              <img className="w-5 h-5" src={Plus} alt="Plus" />
+            </div>
           </div>
           <div className="absolute top-20 bg-[#ffffff]/30 hover:scale-[1.3] transition-transform ease duration-200 left-0 h-5 w-5 rounded-full flex justify-center items-center">
             <div className="bg-[#ffffff] rounded-full h-3 w-3"></div>
