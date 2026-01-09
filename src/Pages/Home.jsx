@@ -39,6 +39,18 @@ function Home() {
               alt=""
             />
           </div>
+          <div className="absolute top-[26%] left-[40%] bg-[#ffffff]/30 hover:scale-[1.1] transition-transform ease duration-200 left-0 h-5 w-5 rounded-full flex justify-center items-center">
+            <div className="bg-[#ffffff] rounded-full h-3 w-3"></div>
+          </div>
+          <div className="absolute  top-[30%] left-[50%] flex justify-end items-start">
+            <InfoBucket
+              title="SILHOUETTE CONTROL"
+              title1="Volume vs. Structure"
+              description="A relaxed upper silhouette is balanced by a structured lower frame.
+This contrast preserves a clean human form while maintaining comfort.
+True elegance lies in restraint, not excess."
+            />
+          </div>
           <div className="absolute top-[23%] left-[70%] bg-[#ffffff]/30 hover:scale-[1.1] transition-transform ease duration-200 left-0 h-5 w-5 rounded-full flex justify-center items-center">
             <div className="bg-[#ffffff] rounded-full h-3 w-3"></div>
           </div>
