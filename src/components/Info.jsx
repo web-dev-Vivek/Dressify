@@ -1,36 +1,42 @@
-import { useState } from "react";
 import Plus from "/plus.svg";
 
-function InfoBucket({ title, title1, description }) {
-  const [open, setOpen] = useState(false);
+function InfoBucket({
+  id,
+  activeBucket,
+  setActiveBucket,
+  title,
+  title1,
+  description,
+}) {
+  const open = activeBucket === id;
 
   return (
-    <div
-      className={`absolute z-50 w-90 rounded-xl overflow-hidden flex flex-col`}
-    >
-      <div
-        className={`flex w-full p-2 bg-white z-100 justify-between items-center gap-2
-        ${open ? "rounded-xl rounded-b-none" : "rounded-xl"}`}
-      >
-        <p>
-          <span className="text-gray-600 text-sm ">{title} </span> {title1}
+    <div className="relative z-50 w-[26vw]">
+      {/* Trigger */}
+      <div className="flex items-center justify-between bg-white rounded-xl px-3 py-2 shadow-md">
+        <p className="text-sm">
+          <span className="text-gray-500">{title}</span> {title1}
         </p>
 
         <button
-          onClick={() => setOpen(!open)}
-          className="bg-gray-400/20 rounded-full h-5 w-5 flex justify-center items-center"
+          onClick={() => setActiveBucket(open ? null : id)}
+          className="h-6 w-6 rounded-full bg-gray-200 flex items-center justify-center"
         >
-          <img className="w-5 h-5" src={Plus} alt="Plus" />
+          <img
+            src={Plus}
+            className={`transition-transform duration-200 ${
+              open ? "rotate-45" : ""
+            }`}
+          />
         </button>
       </div>
 
-      <p
-        className={`text-sm text-center bg-white p-2 rounded-xl rounded-t-none
-        transition-transform duration-200
-        ${open ? "translate-y-0" : "-translate-y-50"}`}
-      >
-        {description}
-      </p>
+      {/* Content */}
+      {open && (
+        <div className="mt-2 bg-white rounded-xl p-3 shadow-lg text-sm">
+          {description}
+        </div>
+      )}
     </div>
   );
 }

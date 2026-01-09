@@ -1,5 +1,4 @@
-import { React, useEffect, useRef, useState } from "react";
-import gsap from "gsap";
+import { useState } from "react";
 import Closet from "/closet.jpeg";
 import Closet1 from "/closet1.jpeg";
 import Closet2 from "/closet2.jpeg";
@@ -8,113 +7,90 @@ import MaleStyle from "/MaleStyle.jpg";
 import InfoBucket from "../components/Info.jsx";
 
 function Home() {
+  const [activeBucket, setActiveBucket] = useState(null);
+
   return (
     <div>
+      {/* Hero scroll */}
       <div className="flex flex-row overflow-x-scroll">
-        <img className=" h-screen object-cover " src={Closet} alt="" />
-        <img className=" h-screen object-cover " src={Closet1} alt="" />
-        <img className=" h-screen object-cover " src={Closet2} alt="" />
+        <img className="h-screen object-cover" src={Closet} />
+        <img className="h-screen object-cover" src={Closet1} />
+        <img className="h-screen object-cover" src={Closet2} />
       </div>
+
+      {/* Intro */}
       <div className="bg-[#f5f2ed] md:h-[90vh] flex flex-col p-10 gap-4 justify-center items-center">
         <p className="text-6xl">Lorem, ipsum.</p>
         <p className="text-2xl w-2/3 max-w-4xl text-center">
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Mollitia
-          quia necessitatibus quisquam consequuntur nisi, cupiditate dignissimos
-          qui quod amet accusamus culpa nulla omnis voluptatibus, eius
-          voluptatem exercitationem doloremque dicta blanditiis, assumenda
-          obcaecati soluta! Rerum quia voluptates officia tenetur atque
-          distinctio alias molestias cum totam? Dolore?
+          Lorem ipsum dolor sit amet consectetur adipisicing elit.
         </p>
       </div>
-      <div className="relative bg-[#f5f2ed] md:h-[90vh] flex p-10 justify-evenly items-center">
-        <div className="relative flex justify-center items-center gap-4">
-          <div className="flex flex-col justify-center items-center gap-5">
-            <div className="shadow-xl bg-[#1c2939] w-20 h-20 rounded-3xl"></div>
-            <div className="shadow-xl bg-[#ffffff] w-20 h-20 rounded-3xl"></div>
+
+      {/* Styles */}
+      <div className="relative bg-[#f5f2ed] md:h-[70vh] flex px-32 gap-32 justify-center items-center">
+        {/* FEMALE */}
+        <div className="relative flex items-center gap-6">
+          <img
+            className="h-[70vh] rounded-3xl object-cover"
+            src={FemaleStyle}
+          />
+          <div className="absolute w-5 h-5 hover:scale-[1.4] transition-transform duration-200 ease bg-white/30 rounded-full flex justify-center items-center top-[28%] left-[55%]">
+            <div className="w-3 h-3 bg-white rounded-full"></div>
           </div>
-          <div className="">
-            <img
-              className=" h-[70vh] object-cover rounded-3xl "
-              src={FemaleStyle}
-              alt=""
-            />
-          </div>
-          <div className="absolute top-[26%] left-[40%] bg-[#ffffff]/30 hover:scale-[1.1] transition-transform ease duration-200 left-0 h-5 w-5 rounded-full flex justify-center items-center">
-            <div className="bg-[#ffffff] rounded-full h-3 w-3"></div>
-          </div>
-          <div className="absolute  top-[30%] left-[50%] flex justify-end items-start">
+          <div className="absolute top-[18%] left-[60%]">
             <InfoBucket
-              title="SILHOUETTE CONTROL"
-              title1="Volume vs. Structure"
-              description="A relaxed upper silhouette is balanced by a structured lower frame.
-This contrast preserves a clean human form while maintaining comfort.
-True elegance lies in restraint, not excess."
-            />
-          </div>
-          <div className="absolute top-[23%] left-[70%] bg-[#ffffff]/30 hover:scale-[1.1] transition-transform ease duration-200 left-0 h-5 w-5 rounded-full flex justify-center items-center">
-            <div className="bg-[#ffffff] rounded-full h-3 w-3"></div>
-          </div>
-          <div className="absolute  top-[13%] left-[155%] flex justify-end items-start">
-            <InfoBucket
+              id="tonal"
+              activeBucket={activeBucket}
+              setActiveBucket={setActiveBucket}
               title="TONAL CONTRAST"
               title1="Dark × Light Balance"
-              description="Upper and lower tones create a deliberate visual separation.
-High contrast combinations feel sharp and confident, while tonal neutrals feel refined and expensive.
-This balance controls how structured or soft the outfit appears at first glance."
+              description="Upper and lower tones create visual separation. High contrast feels sharp, tonal balance feels refined."
             />
           </div>
-          <div className="absolute top-[68%] left-[40%] bg-[#ffffff]/30 hover:scale-[1.1] transition-transform ease duration-200 left-0 h-5 w-5 rounded-full flex justify-center items-center">
-            <div className="bg-[#ffffff] rounded-full h-3 w-3"></div>
+          <div className="absolute w-5 h-5 hover:scale-[1.4] transition-transform duration-200 ease bg-white/30 rounded-full flex justify-center items-center top-[60%] left-[35%]">
+            <div className="w-3 h-3 bg-white rounded-full"></div>
           </div>
-          <div className="absolute  top-[73%] left-[110%] flex justify-end items-start">
+          <div className="absolute top-[65%] left-[40%]">
             <InfoBucket
+              id="silhouette"
+              activeBucket={activeBucket}
+              setActiveBucket={setActiveBucket}
               title="SILHOUETTE CONTROL"
-              title1="Volume vs. Structure"
-              description="A relaxed upper silhouette is balanced by a structured lower frame.
-This contrast preserves a clean human form while maintaining comfort.
-True elegance lies in restraint, not excess."
+              title1="Volume vs Structure"
+              description="A relaxed upper paired with a structured lower maintains balance and elegance."
             />
           </div>
         </div>
-        <div className="relative flex justify-center items-center gap-4">
-          <div className="flex flex-col justify-center items-center gap-5">
-            <div className="shadow-xl bg-[#ffffff] w-20 h-20 rounded-3xl"></div>
-            <div className="shadow-xl bg-[#614631] w-20 h-20 rounded-3xl"></div>
-          </div>
 
-          <div className="">
-            <img
-              className=" h-[70vh] object-cover rounded-3xl "
-              src={MaleStyle}
-              alt=""
-            />
+        {/* MALE */}
+        <div className="relative flex items-center gap-6">
+          <img className="h-[70vh] rounded-3xl object-cover" src={MaleStyle} />
+          <div className="absolute w-5 h-5 hover:scale-[1.4] transition-transform duration-200 ease bg-white/30 rounded-full flex justify-center items-center top-[68%] left-[45%]">
+            <div className="w-3 h-3 bg-white rounded-full"></div>
           </div>
-
-          <div className="absolute top-[28%] left-[50%] bg-[#ffffff]/30 hover:scale-[1.1] transition-transform ease duration-200 left-0 h-5 w-5 rounded-full flex justify-center items-center">
-            <div className="bg-[#ffffff] rounded-full h-3 w-3"></div>
-          </div>
-          <div className="absolute  top-[33%] left-[130%] flex justify-end items-start">
+          <div className="absolute top-[30%] left-[60%]">
             <InfoBucket
+              id="texture"
+              activeBucket={activeBucket}
+              setActiveBucket={setActiveBucket}
               title="SURFACE CHARACTER"
               title1="Texture Dialogue"
-              description="Fabric textures are intentionally contrasted.
-A textured knit paired with a smooth base layer adds depth and prevents visual flatness.
-Luxury styling is not loud — it’s felt through texture interaction."
+              description="Contrasting textures add depth and prevent a flat appearance."
             />
           </div>
-          <div className="absolute top-[70%] left-[60%] bg-[#ffffff]/30 hover:scale-[1.1] transition-transform ease duration-200 left-0 h-5 w-5 rounded-full flex justify-center items-center">
-            <div className="bg-[#ffffff] rounded-full h-3 w-3"></div>
-          </div>
-          <div className="absolute  top-[73%] left-[130%] flex justify-end items-start">
+
+          <div className="absolute top-[72%] left-[50%]">
             <InfoBucket
+              id="ratio"
+              activeBucket={activeBucket}
+              setActiveBucket={setActiveBucket}
               title="PROPORTION HARMONY"
-              title1="60–30–10 Color Rule"
-              description="For a balanced and refined look, it’s best to follow the 60–30–10 color principle. Use one dominant color (around 60%) to anchor the outfit, a secondary tone (30%) to add depth and contrast, and a subtle accent (10%) to create focus. This approach prevents colors from competing and results in a clean, premium visual harmony."
+              title1="60–30–10 Rule"
+              description="A dominant base, secondary contrast, and subtle accent ensure visual harmony."
             />
           </div>
         </div>
       </div>
-      <div className=""></div>
     </div>
   );
 }
