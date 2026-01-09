@@ -33,7 +33,7 @@ function InfoBucket({
 
       {/* Content */}
       {open && (
-        <div className="mt-2 bg-white rounded-xl p-3 shadow-lg text-sm">
+        <div className="mt-2 bg-white text-center rounded-xl p-3 shadow-lg text-sm">
           {description}
         </div>
       )}
