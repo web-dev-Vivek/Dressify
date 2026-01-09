@@ -29,19 +29,19 @@ function Navbar() {
 
   return (
     <div
-      className={`flex fixed top-0 left-0 w-full transition-transform duration-1000 justify-between items-center p-4 bg-[#f5f2ed] text-black ${
+      className={`flex fixed top-0 left-0 w-full transition-transform duration-1000 justify-between items-center p-4 bg-white/20 backdrop-blur-sm text-black ${
         showNavbar ? "translate-y-0" : "-translate-y-full"
       }`}
     >
-      <div className="w-1/5 h-12 flex justify-evenly items-center ">
+      <div className="w-1/7 h-12 content flex justify-evenly gap-5 items-center ">
         <div>Collection</div>
         <div>Inspiration</div>
         <div>Guide</div>
       </div>
-      <div className="w-3/5 h-12 flex justify-center items-center text-4xl">
-        Attirer
+      <div className="w-4/7 h-12 flex justify-center title items-center text-6xl">
+        ATTIRER
       </div>
-      <div className="w-1/5 h-12 flex justify-evenly gap-4 items-center ">
+      <div className="w-1/7 h-12 flex justify-evenly gap-4 items-center ">
         <img className="w-12 h-12" src={Search} alt="Search" />
         <img className="w-5 h-5" src={Hanger} alt="Hanger" />
         <img className="w-5 h-5" src={Logout} alt="Logout" />

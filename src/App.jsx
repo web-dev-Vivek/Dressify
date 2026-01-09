@@ -4,7 +4,7 @@ import Navbar from "./components/Navbar";
 
 function App() {
   return (
-    <div className="overflow-x-hidden">
+    <div className="bg-[#f5f2ed] overflow-x-hidden">
       <Navbar />
       <Home />
     </div>

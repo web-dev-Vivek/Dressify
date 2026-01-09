@@ -5,6 +5,11 @@ import Closet2 from "/closet2.jpeg";
 import FemaleStyle from "/FemaleStyle1.jpg";
 import MaleStyle from "/MaleStyle.jpg";
 import InfoBucket from "../components/Info.jsx";
+import Closet4 from "/Closet.jpg";
+import Collection from "/Collections.png";
+import CustomerService from "/Customer.png";
+import Guide from "/Guide.jpeg";
+import DesignShowcase from "../components/ShowCase.jsx";
 
 function Home() {
   const [activeBucket, setActiveBucket] = useState(null);
@@ -19,15 +24,20 @@ function Home() {
       </div>
 
       {/* Intro */}
-      <div className="bg-[#f5f2ed] md:h-[90vh] flex flex-col p-10 gap-4 justify-center items-center">
-        <p className="text-6xl">Lorem, ipsum.</p>
-        <p className="text-2xl w-2/3 max-w-4xl text-center">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit.
+      <div className="bg-[#f5f2ed] md:h-[90vh] text-center flex flex-col p-10 gap-4 justify-center items-center">
+        <p className="w-1/2 text-6xl title">
+          Style Systems & Aesthetic Engineering
+        </p>
+        <p className="w-1/2 text-2xl w-2/3 max-w-4xl text-center content">
+          Plastered and precision-knit garments provide a dark, modern visual
+          depth with a smooth, sophisticated finish. This algorithmic approach
+          to styling creates a sober and contemporary expression through the
+          science of material interaction.
         </p>
       </div>
 
       {/* Infobuckets */}
-      <div className="relative bg-[#f5f2ed] md:h-[70vh] flex px-32 gap-32 justify-center items-center">
+      <div className="relative md:h-[70vh] flex px-32 gap-32 justify-center items-center">
         {/* FEMALE */}
         <div className="relative flex items-center gap-6">
           <img
@@ -106,58 +116,76 @@ In premium design, details never decorate — they confirm intention."
       </div>
 
       {/* Related_Pages */}
-      <div className="bg-[#f5f2ed] md:h-[50vh] flex flex-col p-10 gap-4 justify-center">
-        <p className="text-md md:text-xl">Related Pages</p>
+      <div className="bg-[#f5f2ed] md:h-[80vh] flex flex-col p-10 gap-4 justify-center">
+        <p className="text-md md:text-xl title">Related Pages</p>
         <div className="flex justify-center gap-3 items-center">
-          <div className="bg-white w-[26vw] gap-3 flex p-2 justify-evenly items-center h-[18vh] rounded-lg">
+          <div className="bg-white w-[26vw] gap-3 flex p-2 justify-evenly items-center h-[16vh] rounded-lg">
             <img
               className="bg-green-400 w-1/3 rounded-lg h-full"
-              src=""
+              src={Collection}
               alt=""
             />
             <div className=" w-2/3 h-full h-full">
-              <div className="text-gray-500">Collection</div>
-              <div>To Upload your attire </div>
+              <div className="text-gray-500 text-xl title">Collection</div>
+              <div className="content text-sm">To Upload your attire </div>
             </div>
           </div>
-          <div className="bg-white w-[26vw] gap-3 flex p-2 justify-evenly items-center h-[18vh] rounded-lg">
+          <div className="bg-white w-[26vw] gap-3 flex p-2 justify-evenly items-center h-[16vh] rounded-lg">
             <img
               className="bg-green-400 w-1/3 rounded-lg h-full"
-              src=""
+              src={CustomerService}
               alt=""
             />
             <div className=" w-2/3 h-full h-full">
-              <div className="text-gray-500">Customer Service</div>
-              <div>Frequently Asked Questions</div>
+              <div className="text-gray-500 text-xl title">
+                Customer Service
+              </div>
+              <div className="content text-sm">Frequently Asked Questions</div>
             </div>
           </div>
-          <div className="bg-white w-[26vw] gap-3 flex p-2 justify-evenly items-center h-[18vh] rounded-lg">
+          <div className="bg-white w-[26vw] gap-3 flex p-2 justify-evenly items-center h-[16vh] rounded-lg">
             <img
               className="bg-green-400 w-1/3 rounded-lg h-full"
-              src=""
+              src={Guide}
               alt=""
             />
             <div className=" w-2/3 h-full  h-full">
-              <div className="text-gray-500">Guide</div>
-              <div>How to Use </div>
+              <div className="text-gray-500 text-xl title">Guide</div>
+              <div className="content text-sm">How to Use </div>
             </div>
           </div>
-          <div className="bg-white w-[26vw] gap-3 flex p-2 justify-evenly items-center h-[18vh] rounded-lg">
+          <div className="bg-white w-[26vw] gap-3 flex p-2 justify-evenly items-center h-[16vh] rounded-lg">
             <img
               className="bg-green-400 w-1/3 rounded-lg h-full"
-              src=""
+              src={Closet4}
               alt=""
             />
             <div className=" w-2/3 h-full h-full">
-              <div className="text-gray-500">Closet</div>
-              <div>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque,
-                ex?{" "}
-              </div>
+              <div className="text-gray-500 text-xl title">Closet</div>
+              <div className="content text-sm">Select your Vibe </div>
             </div>
           </div>
         </div>
       </div>
+
+      {/* Design Philosophy */}
+      <div>
+        <div className="text-center">
+          <h1 className="md:text-5xl text-2xl title">Design Philosophy</h1>
+          <p className="md:text-xl p-4 md:w-2/3 mx-auto content">
+            Dressing isn’t just wearing clothes; it’s understanding fit, form,
+            and combination.
+          </p>
+        </div>
+        <div className="p-10">
+          <DesignShowcase />
+        </div>
+      </div>
+
+      {/*Blogs aayenge yha pe*/}
+
+      {/*My clothes*/}
+      {/*yha ke wo data hai aayega jo user upload krega usmei door ki rah enter krvana hai dress upload krne ke liye*/}
     </div>
   );
 }
