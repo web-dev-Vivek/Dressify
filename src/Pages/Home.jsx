@@ -10,12 +10,13 @@ import Collection from "/Collections.png";
 import CustomerService from "/Customer.png";
 import Guide from "/Guide.jpeg";
 import DesignShowcase from "../components/ShowCase.jsx";
+import Footer from "../components/Footer.jsx";
 
 function Home() {
   const [activeBucket, setActiveBucket] = useState(null);
 
   return (
-    <div>
+    <div className="z-98 relative overflow-x-hidden">
       {/* Hero scroll left */}
       <div className="flex flex-row overflow-x-scroll">
         <img className="h-screen object-cover" src={Closet} />
@@ -186,6 +187,9 @@ In premium design, details never decorate — they confirm intention."
 
       {/*My clothes*/}
       {/*yha ke wo data hai aayega jo user upload krega usmei door ki rah enter krvana hai dress upload krne ke liye*/}
+      <div className="bg-[#beb4a1] md:h-[90vh]">
+        <Footer />
+      </div>
     </div>
   );
 }
